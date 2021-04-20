@@ -5,12 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>McKeowns</title>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mobile.css">
 </head>
 <body>
     <nav>
-        <div id="logo">Logo</div>
+        <div id="logo">CoolCode</div>
 
         <input type="checkbox" name="hamburgerCheckbox" id="hamburgerCheckbox">
         <label for="hamburgerCheckbox" id="hamburgerLabel"></label>
@@ -19,13 +23,21 @@
             <li class="active"><a href="#anchorHome">Home</a></li>
             <li><a href="#anchorProjects">Projects</a></li>
             <li><a href="#anchorAbout">About</a></li>
-            <li><a href="#anchorContact">Contact</a></li>
         </ul>
     </nav>
 
     <section id="home">
         <span class="anchor" id="anchorHome"></span>
-        <h1>McKeowns</h1>
+
+        <video class="background" autoplay muted loop>
+            <source src="/assets/images/droneFootage.mp4" type="video/mp4">
+        </video>
+
+        <div class="overlay">
+            <h1>Welcome.</h1>
+            <h2>We write code and do other stuff.</h2>
+        </div>
+
     </section>
 
 
@@ -33,21 +45,66 @@
         <span class="anchor" id="anchorProjects"></span>
         <h1>Projects</h1>
 
+        <div class="row wide">
+            <!-- <div class="card">
+                <img src="/assets/images/kids.svg">
+                <h4>Kids</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe commodi minus doloribus iure, quibusdam sunt, sit facilis quasi fuga distinctio esse accusantium. Ipsum voluptas quis omnis illum vitae, doloribus molestiae.</p>
+            </div> -->
+
+            <div class="card">
+                <a href="http://quartlet.com">
+                    <img src="/assets/images/quartlet.svg">
+                    <h4>Quartlet</h4>
+                </a>
+                <p>
+                    A <em>quartlet</em> is a set of four cards for which each of the attributes (color, shape, and number) are either all the same, all different, or matching in pairs.
+                        With game design by <a href="https://www.facebook.com/david.harden.9250">David Harden</a> and inspiration from <a href="https://www.setgame.com/set/puzzle">Set</a>
+                </p>
+            </div>
+
+            <div class="card">
+                <a href="https://digitalsignage-x.com/digital-signage-x-thermo/">
+                    <img src="/assets/images/thermal.svg">
+                    <h4>Fever Detection</h4>
+                </a>
+                <p>Amidst the Covid-19 pandemic, we worked on a project to use facial recognition and a thermal camera to monitor body temperatures.</p>
+            </div>
+
+
+        </div>
+
     </section>
 
 
     <section id="about">
         <span class="anchor" id="anchorAbout"></span>
         <h1>About Us</h1>
+
+        <div class="row">
+            <div class="card">
+                <h1>James McKeown</h1>
+                <p class="bio">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque corrupti nam, minus laborum animi, officiis dolore modi inventore sapiente aliquid dignissimos nisi sequi omnis eligendi odio perferendis distinctio excepturi aspernatur.
+                </p>
+                <div class="row links">
+                    <a href="https://github.com/mckeown12"><i class="fab fa-github fa-3x"></i></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h1>Jack McKeown</h1>
+                <p class="bio">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis accusamus aspernatur quas a voluptas optio minima numquam totam voluptates consectetur, eum voluptate atque quidem doloribus nesciunt exercitationem ducimus architecto iusto?
+                </p>
+                <div class="row links">
+                    <a href="https://github.com/jackeown"><i class="fab fa-github fa-3x"></i></a>
+                </div>
+            </div>
+        </div>
         
     </section>
 
-
-    <section id="contact">
-        <span class="anchor" id="anchorContact"></span>
-        <h1>Get in touch</h1>
-
-    </section>
 
 
     <script src="scripts.js"></script>
