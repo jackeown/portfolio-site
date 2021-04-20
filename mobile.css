@@ -1,4 +1,10 @@
 @media(max-width: 45rem) {
+
+    html{
+        scroll-snap-type: none;
+    }
+
+
     #home {
         align-items: center;
     }
@@ -7,27 +13,118 @@
         width: 98%;
     }
 
-    #hamburgerLabel{
-        display:block;
-        width: 50px;
-        height: 50px;
-        background: red;
+    nav ul{
+        display: none;
+        margin:0px;
+        padding:0px;
+        text-align:center;
+        border-top: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
     }
 
-    #hamburgerCheckbox:checked + #hamburgerLabel{
-        background: green;
+    nav li{
+        border-bottom: none;
     }
+
+    nav li.active{
+        background-color: lightgray;
+        border-bottom: none;
+    }
+
+
+    section > .anchor {
+        position: absolute;
+        top: 0px;
+    }
+
+
+
+
+
+
+
+    /* Hamburger Styles from here down */
+
+    #hamburgerLabel{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+    }
+
+    #hamburgerLabel span,
+    #hamburgerLabel span::before,
+    #hamburgerLabel span::after{
+        height: 2px;
+        width: 2rem;
+        margin:auto;
+        display:block;
+        background-color:black;
+        border-radius: 2px;
+        position:absolute;
+
+        transform: rotate(0deg);
+        transform-origin: 50% 50%;
+        transition: all 0.2s;
+    }
+
+    #hamburgerLabel span::before,
+    #hamburgerLabel span::after{
+        content: '';
+    }
+
+    #hamburgerLabel span::before{
+        transform: translateY(-7px);
+    }
+
+    #hamburgerLabel span::after{
+        transform: translateY(7px);
+    }
+
+
+
+    /* Checked hamburger styles */
+
+    #hamburgerCheckbox:checked + #hamburgerLabel span::before{
+        animation-name: spinny;
+        animation-duration: 0.5s;
+
+        transform: rotate(45deg);
+        bottom: 0px;
+        background-color: black;
+    }
+
+    @keyframes spinny {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(405deg);
+        }
+    }
+
+
+    #hamburgerCheckbox:checked + #hamburgerLabel span{
+        background-color: whitesmoke;
+    }
+    
+    #hamburgerCheckbox:checked + #hamburgerLabel span::after{
+        transform: rotate(-45deg);
+        top: 0px;
+        background-color: black;
+    }
+
+
 
     #hamburgerCheckbox:checked ~ ul{
         display: block;
         position: absolute;
         background-color: whitesmoke;
-        width:100vw;
+        width:100%;
         top: var(--nav-height);
     }
 
-    nav ul{
-        display: none;
-    }
 }
 

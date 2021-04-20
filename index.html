@@ -13,16 +13,32 @@
     <link rel="stylesheet" href="mobile.css">
 </head>
 <body>
+    <script>
+        function closeHamburger(){
+            document.querySelector("#hamburgerCheckbox").checked = false;
+        }
+
+        function flashLogo(){
+            let logo = document.querySelector("#logo");
+            logo.classList.remove("flash");
+            logo.classList.add("flash");
+
+            setTimeout(function(){
+                logo.classList.remove("flash")
+            },100);
+        }
+    </script>
+
     <nav>
-        <div id="logo">CoolCode</div>
+        <div id="logo" onclick="flashLogo()">CoolCode</div>
 
         <input type="checkbox" name="hamburgerCheckbox" id="hamburgerCheckbox">
-        <label for="hamburgerCheckbox" id="hamburgerLabel"></label>
+        <label for="hamburgerCheckbox" id="hamburgerLabel"><span></span></label>
 
         <ul>
-            <li class="active"><a href="#anchorHome">Home</a></li>
-            <li><a href="#anchorProjects">Projects</a></li>
-            <li><a href="#anchorAbout">About</a></li>
+            <li class="active"><a href="#anchorHome" onclick="closeHamburger()">Home</a></li>
+            <li><a href="#anchorProjects" onclick="closeHamburger()">Projects</a></li>
+            <li><a href="#anchorAbout" onclick="closeHamburger()">About</a></li>
         </ul>
     </nav>
 
