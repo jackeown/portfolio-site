@@ -247,7 +247,7 @@ section:nth-child(odd){
 
 #projects::before{
     content: '';
-    background-image: url(/assets/images/godrays2.png);
+    background-image: url(./assets/images/godrays2.png);
     position:absolute;
     opacity: 0.2;
     top: 0;
