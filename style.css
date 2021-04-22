@@ -1,12 +1,12 @@
 /* Global Styles */
 
 @font-face {
-    font-family: OpenSans;
+    font-family: CustomFont;
     src: url(./assets/OpenSans/OpenSans-Regular.ttf);
 }
 
 @font-face {
-    font-family: OpenSans;
+    font-family: CustomFont;
     src: url(./assets/OpenSans/OpenSans-Light.ttf);
     font-weight: 100 300;
 }
@@ -23,7 +23,7 @@
 
     --nav-height: 5.5rem;
 
-    font-family: OpenSans;
+    font-family: CustomFont;
 }
 
 * {
