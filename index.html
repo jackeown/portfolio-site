@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>McKeowns</title>
 
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mobile.css">
 </head>
+
 <body>
     <script>
-        function closeHamburger(){
+        function closeHamburger() {
             document.querySelector("#hamburgerCheckbox").checked = false;
         }
 
-        function flashLogo(){
+        function flashLogo() {
             let logo = document.querySelector("#logo");
             logo.classList.remove("flash");
             logo.classList.add("flash");
 
-            setTimeout(function(){
+            setTimeout(function() {
                 logo.classList.remove("flash")
-            },100);
+            }, 100);
         }
     </script>
 
@@ -46,8 +48,8 @@
         <span class="anchor" id="anchorHome"></span>
 
         <video class="background" autoplay muted loop>
-            <source src="/assets/images/droneFootage.mp4" type="video/mp4">
-        </video>
+                <source src="/assets/images/droneFootage.mp4" type="video/mp4">
+            </video>
 
         <div class="overlay">
             <h1>Welcome.</h1>
@@ -74,8 +76,7 @@
                     <h4>Quartlet</h4>
                 </a>
                 <p>
-                    A <em>quartlet</em> is a set of four cards for which each of the attributes (color, shape, and number) are either all the same, all different, or matching in pairs.
-                        With game design by <a href="https://www.facebook.com/david.harden.9250">David Harden</a> and inspiration from <a href="https://www.setgame.com/set/puzzle">Set</a>
+                    A <em>quartlet</em> is a set of four cards for which each of the attributes (color, shape, and number) are either all the same, all different, or matching in pairs. With game design by <a href="https://www.facebook.com/david.harden.9250">David Harden</a>                    and inspiration from <a href="https://www.setgame.com/set/puzzle">Set</a>
                 </p>
             </div>
 
@@ -98,31 +99,40 @@
         <h1>About Us</h1>
 
         <div class="row">
-            <div class="card">
+            <div class="card" id="james">
                 <h1>James McKeown</h1>
+                <h2>Lead Data Scientist at Watsco Ventures</h2>
                 <p class="bio">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque corrupti nam, minus laborum animi, officiis dolore modi inventore sapiente aliquid dignissimos nisi sequi omnis eligendi odio perferendis distinctio excepturi aspernatur.
+                    I design, train, and deploy machine learning models for our IOT product <a href="http://www.sentree.com">Sentree</a>. Models detect and classify anomalies and generate alerts for HVAC technicians and homeowners when an airconditioner's
+                    perfomance is degrading. Prior to Watsco I was completing my math Ph.D. under <a href="http://www.math.miami.edu/~armstrong">Drew Armstrong</a> at the University of Miami. Outside of work, I enjoys kiteboarding, piano, spending time
+                    with my family, learning new things, and coding with my brother <a href="#jack">Jack</a>.
+
                 </p>
                 <div class="row links">
                     <a href="https://github.com/mckeown12"><i class="fab fa-github fa-3x"></i></a>
                 </div>
             </div>
 
-            <div class="card">
+            <div class="card" id="jack">
                 <h1>Jack McKeown</h1>
+                <h2>CS Ph.D. Student at The University of Miami</h2>
                 <p class="bio">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis accusamus aspernatur quas a voluptas optio minima numquam totam voluptates consectetur, eum voluptate atque quidem doloribus nesciunt exercitationem ducimus architecto iusto?
+                    I work with
+                    <a href="https://www.cs.miami.edu/home/geoff/">Geoff Sutcliffe</a> on machine learning techniques for guiding automated theorem proving. More generally, I am interested in theoretical machine learning and the interplay between data
+                    modeling, algorithms, and archatectures. I also enjoy playing Super Smash Bros. Melee (SSBM), babysitting my nephew <a href="./assets/images/micah.jpeg">Micah</a> and niece
+                    <a href="./assets/images/micah.jpg">Nora</a>, or coding with my brother <a href="#james">James</a>.
                 </p>
                 <div class="row links">
                     <a href="https://github.com/jackeown"><i class="fab fa-github fa-3x"></i></a>
                 </div>
             </div>
         </div>
-        
+
     </section>
 
 
 
     <script src="scripts.js"></script>
 </body>
+
 </html>
