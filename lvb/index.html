@@ -7,33 +7,87 @@
     <title>LVB</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
     <style>
         #app {
             display: flex;
             align-items: center;
             flex-direction: column;
             justify-content: center;
-            
+
+        }
+
+        #mysource {
+            width: 100%
         }
     </style>
+    <script>
+        function setTime(t1) {
+            song = document.getElementById("mysource")
+            song.load()
+            song.currentTime = t1
+
+        }
+        function move(t1) {
+            song = document.getElementById("mysource")
+            if (song.currentTime == 0) {
+                song.currentTime = t1
+            }
+            else song.currentTime = song.currentTime + t1
+
+        }
+    function tester(){
+        song = document.getElementById("mysource")
+        test = document.getElementById("test")
+        test.innerText = song.currentTime
+        test2 = document.getElementById("test2")
+        test2.innerText = song.duration
+    }
+    setInterval(tester)
+    </script>
+</head>
+
+<body>
     <div id="app">
         <div id="song1">
             <h1>lvb 2021/2022 show with no vocals</h1>
-            <audio controls>
+            <audio controls id="mysource">
                 <source src="lvb_no_vocal.mp3" type="audio/mpeg">
             </audio>
+            <div>
+                <button type="button" onclick="move(-60)"><i class="fas fa-backward"></i>60</button>
+                <button type="button" onclick="move(-5)"><i class="fas fa-backward"></i>5</button>
+                <button type="button" onclick="move(-1)"><i class="fas fa-backward"></i>1</button>
+                <button type="button" onclick="move(1)"><i class="fas fa-forward"></i>1</button>
+                <button type="button" onclick="move(5)"><i class="fas fa-forward"></i>5</button>
+                <button type="button" onclick="move(60)"><i class="fas fa-forward"></i>60</button>
+
+            </div>
+            <div>
+                <button type="button" onclick="setTime(0)">opener</button>
+                <button type="button" onclick="setTime(3*60+40)">second song</button>
+                <button type="button" onclick="setTime(5*60+41)">balled</button>
+                <button type="button" onclick="setTime(3*60+17)">closer</button>
+            </div>
+            <h1 id="test"></h1>
+            <h1 id="test2"></h1>
+
         </div>
-        <div id="song2">
+        <!-- <div id="song2">
             <h1>lvb 2021/2022 show with vocals</h1>
 
             <audio controls>
                 <source src="./lvb_with_vocal.mp3" type="audio/mpeg">
             </audio>
-        </div>
+        </div> -->
     </div>
-</head>
+<script>
 
-<body>
+// song = document.getElementById('song1')
+// song.load()
+</script>
 
 </body>
 
